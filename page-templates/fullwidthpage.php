@@ -14,8 +14,10 @@ get_header();
 $modal = 0;
 ?>
 <main id="main" style="padding-top:130px">
-	<?php the_post();
-	the_content(); ?>
+	<div class="container-xl">
+		<?php the_post();
+the_content(); ?>
+	</div>
 </main>
 <?php
 get_footer();
