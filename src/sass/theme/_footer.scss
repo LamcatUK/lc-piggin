@@ -1,0 +1,112 @@
+// .pre_footer {
+//     background-color: $grey-500;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+//     @media (min-width:768px) {
+//         background-position: top left;
+//         background-size: contain;
+//     }
+//     a {
+//         color: $orange-500;
+//         text-decoration: none;
+//         transition: color 0.15s ease-in-out;
+//         font-size: 2.2rem;
+//         &:not(:last-of-type) {
+//             margin-right: 0.5rem;
+//         }
+//         &:hover {
+//             color: white;
+//         }
+//     }
+// }
+
+// .footer {
+//     background-color: $blue-500;
+//     color: white;
+//     a {
+//         color: white;
+//         text-decoration: none;
+//         transition: color 0.15s ease-in-out;
+//         &:hover {
+//             color: $orange-500;
+//         }
+//     }
+//     .logo {
+//         max-width: 100%;
+//         @media (min-width:1120px) {
+//             max-width: 250px;
+//         }
+//     }
+
+//     a.phone {
+//         color: $orange-500;
+//         text-decoration: none;
+//         transition: color 0.15s ease-in-out;
+//         font-size: 1rem;
+//         &:hover {
+//             color: white;
+//         }
+//     }
+//     a.email {
+//         font-size: 1rem;
+//     }
+
+//     .nav-title {
+//         font-weight: 700;
+//         font-size: 1rem;
+//         color: $grey-600;
+//         padding-bottom: 0.5rem;
+//         margin-bottom: 1rem;
+//         border-bottom: 1px solid $orange-500-tx;
+//     }
+//     ul {
+//         list-style-type: none;
+//         padding-inline-start: 0;
+//         li {
+//             text-transform: uppercase;
+//             font-size: 0.8rem;
+//             margin-bottom: 0.25rem;
+//         }
+//     }
+
+//     .social {
+//         a {
+//             color: $orange-500;
+//             text-decoration: none;
+//             transition: color 0.15s ease-in-out;
+//             font-size: 1.8rem;
+//             &:not(:last-of-type) {
+//                 margin-right: 0.25rem;
+//             }
+//             &:hover {
+//                 color: white;
+//             }    
+//         }
+//     }
+// }
+
+.pre_footer {
+    background-color: $grey;
+    .social-icons {
+        font-size: 1.8rem;
+    }
+}
+.footer {
+    background-color: $black;
+    .colophon {
+        color: white;
+        font-size: 0.8rem;
+        // .container {
+        //     border-top: 1px solid $grey;
+        // }
+        a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.15s ease-in-out;
+            &:hover {
+                color: $grey;
+            }
+        }
+    }
+}

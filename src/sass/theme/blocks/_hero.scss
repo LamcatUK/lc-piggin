@@ -1,0 +1,36 @@
+.hero {
+    .carousel-inner {
+        height: 600px;
+    }
+    .carousel__image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        height: 100%;
+        display: flex;
+        position: relative;
+    }
+
+    .carousel__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: #00000048;
+    }
+    .carousel__title {
+        font-family: 'Bangers', Calibri, 'Trebuchet MS', sans-serif;;
+        color: white;
+        line-height: 1.1;
+        margin: auto;
+        filter: drop-shadow(-2px 2px 2px black);
+    }
+    .carousel__subtitle {
+        color: white;
+        font-size: 1.875rem;
+        font-size: clamp(1.875rem, 1.75rem + 0.625vw, 2.5rem);
+        filter: drop-shadow(-2px 2px 2px black);
+    }
+
+}
+

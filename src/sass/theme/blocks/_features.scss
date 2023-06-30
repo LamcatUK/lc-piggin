@@ -1,0 +1,17 @@
+.features {
+    // background-color: $grey;
+    background-color: $green;
+    background: linear-gradient(60deg, rgba(0,134,65,1) 10%, rgba(0,180,87,1) 90%);
+    color: white;
+    img {
+        margin-bottom: 0.5rem;
+        border-radius: 0.5rem;
+        filter: drop-shadow(-2px 2px 2px #00000048);
+    }
+    h3 {
+        font-family: 'Antic', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        font-size: 1.4rem;
+    }
+}

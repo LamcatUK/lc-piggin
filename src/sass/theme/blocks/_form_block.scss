@@ -1,0 +1,73 @@
+.form_block {
+    a {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .wpcf7-acceptance {
+        font-size: 0.8rem;
+        label {
+            display: flex;
+        }
+
+        input[type="checkbox"] {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            margin-right: 10px;
+            width: 15px;
+        }
+        input[type="checkbox"]:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            margin-top: -2px;
+            width: 20px;
+            height: 20px;
+            background: #fcfcfc;
+            border: 1px solid #aaa;
+            border-radius: 2px;
+        }
+        
+        
+         input[type="checkbox"]:checked:before {
+            background: $green;
+            border-color: $green;
+        }
+         input[type="checkbox"]:disabled {
+            color: #b8b8b8;
+            cursor: auto;
+        }
+         input[type="checkbox"]:disabled:before {
+            box-shadow: none;
+            background: #ddd;
+        }
+         input[type="checkbox"]:checked:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 8px;
+            background: white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+            transform: rotate(45deg);
+        }
+        
+        
+         span.wpcf7-list-item{
+           margin: 20px 0 0 0;
+        }
+
+    }
+    .wpcf7 input[type=submit]:disabled {
+        color: $green;
+        background-color: transparent;
+    }
+    .wpcf7 input[type=submit] {
+        background-color: $green;
+        border-color: $green;
+        color: white;
+    }
+
+
+}

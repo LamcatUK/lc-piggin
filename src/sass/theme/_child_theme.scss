@@ -1,0 +1,50 @@
+@import "typography";
+@import "buttons";
+@import "header";
+@import "footer";
+@import "blocks/blocks";
+
+
+
+// #main {
+//     // margin-top: 79px;
+//     margin-top: 113px;
+//     @media (min-width:992px) {
+//         margin-top: 113px;
+//     }
+// }
+
+a.noline {
+    text-decoration: none;
+}
+
+.wpcf7-acceptance {
+    .wpcf7-list-item{
+        margin-left: 0 !important;
+    }
+}
+
+.mw-95ch {
+    max-width: 95ch;
+}
+.mw-65ch {
+    max-width: 65ch;
+}
+.mw-50ch {
+    max-width: 50ch;
+}
+
+.breakout{
+    width: 100vw;
+    position: relative;
+    background-color: $grey;
+    left: calc(-1 * (100vw - 100%) / 2);
+}
+
+.anchor {
+    display: block;
+    position: relative;
+//     top: -120px;
+    // top: 3rem;
+    visibility: hidden;
+}

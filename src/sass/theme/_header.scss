@@ -1,0 +1,139 @@
+#main-nav {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar-brand {
+        display: flex;
+        background-image: url(../img/piggin-good-logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 120px;
+    }
+
+    .navbar-nav {
+        li.current-menu-item a {
+            text-decoration: underline;
+        }
+    }
+
+    .nav-link {
+        color: white;
+        &:hover {
+            color: $green;
+        }
+    }
+
+    .navbar-toggler {
+        color: white;
+        margin-right: 1rem;
+        &:focus {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+
+    /* ditch the ugle blue outline */
+    .navbar-toggler:focus,
+    .navbar-toggler:active {
+        outline: 0;
+    }
+
+    .close-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+    }
+    /* hide close when burger shown */
+    .navbar-toggler.collapsed .close-icon {
+        display: none;
+    }
+
+    .navbar-toggler.collapsed .navbar-toggler-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+    }
+    .navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+        display: none;
+    }
+
+
+    .social-icons {
+        font-size: 1.4rem;
+        a {
+            color: $orange-500;
+            &:hover {
+                color: white;
+            }
+        }
+    }
+}
+
+.mobile-nav {
+    width: 100%;
+    .social {
+        a {
+            color: $orange-500;
+            font-size: 1.4rem;
+        }
+    }
+}
+
+
+#main-nav {
+    // position: fixed;
+    height: 145px;
+    // @media (min-width:992px) {
+    //     height: 90px;
+    // }
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all .15s ease-in-out;
+
+    &.bg-white {
+        box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.5);
+        .nav-link {
+            color: black;
+        }
+        .nav-phone {
+            color: $green;
+        }
+        .navbar-toggler {
+            color: black;
+        }
+    }
+}
+#main-nav.hide {
+    top: -145px;
+    // @media (min-width:992px) {
+    //     top: -90px;
+    // }
+}
+.nav-phone {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+    &::before {
+        content: "\f095";
+        font-family: fontawesome;
+        margin-right: 5px;
+    }
+}
+.nav-right {
+    align-self: flex-end;
+    margin-bottom: 23px;
+    .btn-primary {
+        box-shadow: none;
+        min-width: 120px;
+        text-transform: uppercase;
+        font-size: 1rem;
+        padding: 0.34em;
+    }
+}
