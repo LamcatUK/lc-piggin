@@ -1,0 +1,32 @@
+.gallery {
+    --transition: 300ms ease-out;
+    margin-bottom: 0;
+
+    .gallery__image {
+        cursor: pointer;
+        margin-bottom: 0;
+        width: 33%;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
+            img {
+                transform: scale(1.05);
+            }
+        }
+        img {
+            transition: transform var(--transition);
+        }
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-content: center;
+            background-color: hsl(345 6% 13% / 0.8);
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+    }
+}

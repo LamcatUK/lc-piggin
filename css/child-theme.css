@@ -15947,6 +15947,36 @@ strong {
   color: white;
 }
 
+.gallery {
+  --transition: 300ms ease-out;
+  margin-bottom: 0;
+}
+.gallery .gallery__image {
+  cursor: pointer;
+  margin-bottom: 0;
+  width: 33%;
+  position: relative;
+  overflow: hidden;
+}
+.gallery .gallery__image:hover .overlay {
+  opacity: 1;
+}
+.gallery .gallery__image:hover img {
+  transform: scale(1.05);
+}
+.gallery .gallery__image img {
+  transition: transform var(--transition);
+}
+.gallery .gallery__image .overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background-color: rgba(35, 31, 32, 0.8);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
 a.noline {
   text-decoration: none;
 }

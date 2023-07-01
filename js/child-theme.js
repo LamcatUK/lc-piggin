@@ -1,6 +1,6 @@
 /*!
   * Understrap v1.1.0 (https://understrap.com)
-  * Copyright 2013-2022 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
+  * Copyright 2013-2023 The Understrap Authors (https://github.com/understrap/understrap/graphs/contributors)
   * Licensed under GPL (http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
   */
 (function (global, factory) {
@@ -9352,32 +9352,28 @@
 	      $("#main-nav").removeClass("bg-white");
 	    }
 	  });
-	})(jQuery);
-
-	(function ($) {
-	  var gallery_id = '426067170422';
-	  var title = $('h2'),
-	      viewer = $('#viewer'),
-	      thumbs = $('#thumbs'); // album info
-
-	  $.getJSON('//graph.facebook.com/' + gallery_id + '?callback=?', function (json, status, xhr) {
-	    title.html('<a href="' + json.link + '">' + json.name + '</a> from ' + json.from.name);
-	  }); // images
-
-	  $.getJSON('//graph.facebook.com/' + gallery_id + '/photos?callback=?', function (json, status, xhr) {
-	    var imgs = json.data;
-	    viewer.attr('src', imgs[0].images[0].source);
-
-	    for (var i = 0, l = imgs.length - 1; i < l; i++) {
-	      $('<img src="' + imgs[i].images[3].source + '" data-fullsize="' + imgs[i].images[0].source + '">').appendTo(thumbs);
-	    }
-
-	    $('img', thumbs).bind('click', function (e) {
-	      e.preventDefault();
-	      viewer.attr('src', $(this).attr('data-fullsize'));
-	    });
-	  });
-	})(jQuery);
+	})(jQuery); // (function ($) {
+	//   var gallery_id = '426067170422';
+	//   var title = $('h2'),
+	//       viewer = $('#viewer'),
+	//       thumbs = $('#thumbs');
+	//   // album info
+	//   $.getJSON('//graph.facebook.com/' + gallery_id + '?callback=?', function(json, status, xhr) {
+	//     title.html('<a href="' + json.link + '">' + json.name + '</a> from ' + json.from.name);
+	//   });
+	//   // images
+	//   $.getJSON('//graph.facebook.com/' + gallery_id + '/photos?callback=?', function(json, status, xhr) {
+	//     var imgs = json.data;
+	//     viewer.attr('src', imgs[0].images[0].source)
+	//     for (var i = 0, l = imgs.length - 1; i < l; i++) {
+	//       $('<img src="' + imgs[i].images[3].source + '" data-fullsize="' + imgs[i].images[0].source + '">').appendTo(thumbs);
+	//     }
+	//     $('img', thumbs).bind('click', function(e) {
+	//       e.preventDefault();
+	//       viewer.attr('src', $(this).attr('data-fullsize'));
+	//     });
+	//   });
+	// })(jQuery);
 
 	exports.Alert = alert;
 	exports.Button = button;
