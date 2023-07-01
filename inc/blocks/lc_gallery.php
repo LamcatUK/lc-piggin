@@ -11,6 +11,7 @@
         $d = 0;
 foreach (get_field('images') as $i) {
     the_row();
+    $arr = wp_get_attachment_image_src($i, 'full');
     ?>
             <div data-thumb="<?=wp_get_attachment_image_url($i, 'large')?>"
                 class="gallery__image" data-aos="fade"
@@ -18,8 +19,9 @@ foreach (get_field('images') as $i) {
                 data-aos-anchor=".gallery__grid">
                 <a href="<?=wp_get_attachment_image_url($i, 'full')?>"
                     data-fancybox="gallery">
-                    <img
-                        src="<?=wp_get_attachment_image_url($i, 'full')?>">
+                    <img src="<?=wp_get_attachment_image_url($i, 'full')?>"
+                        width="<?=$arr[1]?>"
+                        height="<?=$arr[2]?>">
                 </a>
             </div>
             <?php
